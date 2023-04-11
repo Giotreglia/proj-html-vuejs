@@ -7,7 +7,7 @@ export default {
     <section id="cta">
         <div id="cta-container">
             <p class="cta-text">How to Enroll Your Child to a Class?</p>
-            <button class="btn btn-white">Learn more <i class="fa-solid fa-chevron-right"></i></button>
+            <button class="btn btn-white">LEARN MORE <i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 </template>
@@ -32,5 +32,6 @@ export default {
     .cta-text {
         font-size: 40px;
     }
+
 }
 </style>
