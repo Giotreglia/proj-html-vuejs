@@ -1,5 +1,37 @@
+@use './partials/variables' as *;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn {
+    padding: 15px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover {
+        scale: 1.05;
+    }
+
+    &:active {
+        scale: 1;
+    }
+}
+
+.btn-white {
+    background-color: transparent;
+    border: solid 2px white;
+    color: white;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
 }
