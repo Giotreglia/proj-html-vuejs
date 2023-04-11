@@ -49,7 +49,7 @@ export default {
     <Jumbotron />
 
     <!-- Call to action -->
-    <CTA />
+    <CTA :title="`How to Enroll Your Child to a Class?`" :buttonText="`LEARN MORE`" />
 </template>
 <style lang="scss">
 @use '../styles/general.scss';

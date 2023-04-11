@@ -1,13 +1,17 @@
 <script>
 export default {
     name: 'CTA',
+    props: {
+        title: String,
+        buttonText: String
+    }
 }
 </script>
 <template>
     <section id="cta">
         <div id="cta-container">
-            <p class="cta-text">How to Enroll Your Child to a Class?</p>
-            <button class="btn btn-white">LEARN MORE <i class="fa-solid fa-chevron-right"></i></button>
+            <p class="cta-text">{{ title }}</p>
+            <button class="btn-big btn-white">{{ buttonText }} <i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 </template>
@@ -31,6 +35,10 @@ export default {
 
     .cta-text {
         font-size: 40px;
+    }
+
+    i {
+        font-size: 8px;
     }
 
 }
