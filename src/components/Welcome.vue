@@ -1,9 +1,11 @@
 <script>
 import Card from './Card.vue'
+import SectionHeader from './SectionHeader.vue';
 export default {
     name: 'Welcome',
     components: {
-        Card
+        Card,
+        SectionHeader
     },
     data() {
         return {
@@ -41,13 +43,7 @@ export default {
     <section id="welcome">
 
         <!-- Welcome header -->
-        <div id="welcome-header">
-            <span class="welcome-title primary">Welcome to fable</span>
-            <span class="welcome-subtitle">Fable daycare, preschool, and kindergarten</span>
-            <div class="welcome-img-container">
-                <img src="src\assets\images\header_divider.png" alt="divisore">
-            </div>
-        </div>
+        <SectionHeader :title="`Welcome to Fable`" :subtitle="`Fable daycare, preschool, and kindergarten`" />
 
         <!-- Welcome list -->
         <div id="welcome-list-container">
