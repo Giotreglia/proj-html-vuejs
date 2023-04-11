@@ -14,6 +14,13 @@ export default {
                     title: 'Varied Classes',
                     text: 'Pulvinar est metro ligula blandit maecenas retrum gravida cuprum. Maecenas node estibulum.'
                 }
+            ],
+            thumbnails: [
+
+                'src/assets/images/gallery_07-690x506.jpg',
+                'src/assets/images/gallery_01-690x506.jpg',
+                'src/assets/images/gallery_08-690x506.jpg',
+
             ]
         }
     },
@@ -24,7 +31,11 @@ export default {
         <div id="overview-mission-container">
             <div class="overview-mission-left">
                 <div class="overview-buttons">
-                    <button class="btn-left btn bg-secondary">Overview</button>
+                    <button class="btn-left btn bg-secondary">
+                        <span class="arrow-down"><i class="fa-solid fa-sort-down"></i></span>
+                        Overview
+                    </button>
+
                     <button class="btn-right btn">Our Mission</button>
                 </div>
 
@@ -35,7 +46,7 @@ export default {
                     <div class="overvie-img-wrapper">
                         <img :src="card.image" :alt="card.title">
                     </div>
-                    <div class="overview-list-right">
+                    <div class="overview-list-left">
                         <h3 class="primary">{{ card.title }}</h3>
                         <p class="text-grey">{{ card.text }}</p>
                     </div>
@@ -43,7 +54,16 @@ export default {
             </div>
 
             <div class="overview-mission-right">
-
+                <div class="overview-carousel">
+                    <img src="../assets/images/gallery_01.jpg" alt="team">
+                    <div class="chevron prev"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="chevron next"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                <div class="overview-thumbnails">
+                    <div class="overview-thumbnail" v-for="slide in thumbnails">
+                        <img :src="slide" alt="thumbnail">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -77,13 +97,84 @@ export default {
 
 .overview-mission-right {
     width: 45%;
+    height: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: 20px;
+
+    .overview-carousel {
+        width: 100%;
+        height: 70%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .overview-thumbnails {
+        display: flex;
+        justify-content: center;
+        height: 28%;
+        gap: 10px;
+        cursor: pointer;
+
+        .overview-thumbnail {
+            width: calc(100% / 3);
+            padding: 10px 0;
+            position: relative;
+
+            &:nth-child(2):after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $color-secondary;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+
 }
+
+.chevron {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: $color-secondary;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+
 
 .overview-buttons {
     .btn-left {
         color: white;
+        position: relative;
+
+        &::after {
+            content: "";
+        }
     }
 
     .btn-right {
@@ -96,7 +187,7 @@ export default {
     align-items: center;
     gap: 20px;
 
-    .overview-list-right {
+    .overview-list-left {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -116,5 +207,14 @@ export default {
     background-color: $color-secondary;
     border-radius: 50%;
     padding: 30px;
+}
+
+.arrow-down {
+    color: $color-secondary;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
 }
 </style>
