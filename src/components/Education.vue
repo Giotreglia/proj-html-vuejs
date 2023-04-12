@@ -57,10 +57,7 @@ export default {
 
         <!-- Education bottom images -->
         <div class="education-images-container">
-            <img src="../assets/images/gallery_01-690x506.jpg" alt="">
-            <img src="../assets/images/gallery_02-690x506.jpg" alt="">
-            <img src="../assets/images/gallery_03-690x506.jpg" alt="">
-            <img src="../assets/images/gallery_04-690x506.jpg" alt="">
+            <img :src="`src/assets/images/gallery_0${i + 1}-690x506.jpg`" alt="gallery-image" v-for="(img, i) in 4">
         </div>
 
         <!-- Call to action -->

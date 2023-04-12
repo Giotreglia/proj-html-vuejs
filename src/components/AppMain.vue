@@ -5,6 +5,7 @@ import StatsSection from './StatsSection.vue';
 import Classes from './Classes.vue';
 import Education from './Education.vue';
 import StaffSection from './StaffSection.vue';
+import QuoteBanner from './QuoteBanner.vue';
 
 export default {
     name: 'AppMain',
@@ -14,7 +15,8 @@ export default {
         StatsSection,
         Classes,
         Education,
-        StaffSection
+        StaffSection,
+        QuoteBanner
     }
 }
 </script>
@@ -26,6 +28,7 @@ export default {
         <Classes />
         <Education />
         <StaffSection />
+        <QuoteBanner />
     </main>
 </template>
 <style lang="scss">

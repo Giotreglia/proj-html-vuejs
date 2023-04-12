@@ -18,7 +18,7 @@ export default {
             <div class="card-img-container">
                 <img v-if="img" :src="img" :alt="name">
             </div>
-            <span class="name">{{ name }}</span>
+            <span class="name primary">{{ name }}</span>
             <span class="role text-grey">{{ role }}</span>
         </div>
         <div class="card-right">
