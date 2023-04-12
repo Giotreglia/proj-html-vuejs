@@ -73,6 +73,7 @@ export default {
 
 #stats-list-container {
     display: flex;
+    justify-content: space-between;
     max-width: 1170px;
     margin: auto;
 

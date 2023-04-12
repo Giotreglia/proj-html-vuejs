@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
     <section id="cta">
-        <div id="cta-container">
+        <div id="cta-container" class="container">
             <p class="cta-text">{{ title }}</p>
             <button class="btn-big btn-white">{{ buttonText }} <i class="fa-solid fa-chevron-right"></i></button>
         </div>
@@ -24,9 +24,7 @@ export default {
     background-image: url('../assets/images/pattern.png');
 
     #cta-container {
-        max-width: 1000px;
         height: 100%;
-        margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;

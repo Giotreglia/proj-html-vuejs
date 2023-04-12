@@ -40,7 +40,7 @@ export default {
 }
 </script>
 <template>
-    <section id="welcome">
+    <section id="welcome" class="container">
 
         <!-- Welcome header -->
         <SectionHeader :title="`Welcome to Fable`" :subtitle="`Fable daycare, preschool, and kindergarten`" />
@@ -61,36 +61,15 @@ export default {
 
 #welcome {
     padding: 50px 0;
-    max-width: 1170px;
-    margin: auto;
-}
-
-#welcome-header {
-    text-align: center;
-
-    .welcome-title {
-        font-size: 60px;
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .welcome-subtitle {
-        font-size: 23px;
-        color: rgb(160, 160, 160);
-    }
-
-    .welcome-img-container {
-        padding: 30px 0;
-
-    }
 }
 
 #welcome-list-container {
     display: flex;
+    justify-content: space-between;
 }
 
 .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 </style>

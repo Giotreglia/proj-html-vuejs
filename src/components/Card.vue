@@ -32,7 +32,11 @@ export default {
     align-items: center;
     text-align: center;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0;
+
+    p {
+        width: 250px;
+    }
 }
 
 .card-img-container {

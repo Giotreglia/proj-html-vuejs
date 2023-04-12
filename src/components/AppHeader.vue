@@ -20,7 +20,7 @@ export default {
     <header>
 
         <!-- Header -->
-        <div id="header-container">
+        <div id="header-container" class="container">
 
             <!-- Logo -->
             <div id="logo-container">
@@ -60,8 +60,6 @@ header {
 }
 
 #header-container {
-    max-width: 1000px;
-    margin: auto;
     height: 100%;
     display: flex;
     justify-content: space-between;

@@ -3,6 +3,7 @@ import Welcome from '../components/Welcome.vue';
 import OverviewMission from './OverviewMission.vue';
 import StatsSection from './StatsSection.vue';
 import Classes from './Classes.vue';
+import Education from './Education.vue';
 
 export default {
     name: 'AppMain',
@@ -10,7 +11,8 @@ export default {
         Welcome,
         OverviewMission,
         StatsSection,
-        Classes
+        Classes,
+        Education
     }
 }
 </script>
@@ -20,6 +22,7 @@ export default {
         <OverviewMission />
         <StatsSection />
         <Classes />
+        <Education />
     </main>
 </template>
 <style lang="scss">

@@ -7,37 +7,7 @@ export default {
     components: {
         SectionHeader,
         ClassesCard
-    },
-    data() {
-        return {
-            welcomeList: [
-                {
-                    image: 'src/assets/images/schoolbag_alt.png',
-                    title: 'Morbi Etos',
-                    text: 'Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.',
-                    color: 'bg-secondary'
-                },
-                {
-                    image: 'src/assets/images/stroller_alt.png',
-                    title: 'Congue Gravida',
-                    text: 'Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna etos interdum vitae est.',
-                    color: 'bg-primary'
-                },
-                {
-                    image: 'src/assets/images/globe_alt.png',
-                    title: 'Maecenas Node',
-                    text: 'Praesent interdum est gravida vehicula est node maecenas loareet morbi a dosis luctus novum est praesent.',
-                    color: 'bg-secondary'
-                },
-                {
-                    image: 'src/assets/images/bell_alt.png',
-                    title: 'Praesent interdum',
-                    text: 'Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna etos interdum vitae est.',
-                    color: 'bg-primary'
-                }
-            ]
-        }
-    },
+    }
 }
 </script>
 <template>
