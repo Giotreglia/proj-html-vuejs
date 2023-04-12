@@ -41,7 +41,7 @@ export default {
         justify-content: space-between;
         bottom: 60px;
         left: 38%;
-        width: 1000px;
+        width: 900px;
     }
 
     .jumbo-squares-container {

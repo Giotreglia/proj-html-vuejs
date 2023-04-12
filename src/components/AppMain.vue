@@ -6,6 +6,7 @@ import Classes from './Classes.vue';
 import Education from './Education.vue';
 import StaffSection from './StaffSection.vue';
 import QuoteBanner from './QuoteBanner.vue';
+import News from './News.vue';
 
 export default {
     name: 'AppMain',
@@ -16,7 +17,8 @@ export default {
         Classes,
         Education,
         StaffSection,
-        QuoteBanner
+        QuoteBanner,
+        News
     }
 }
 </script>
@@ -29,6 +31,7 @@ export default {
         <Education />
         <StaffSection />
         <QuoteBanner />
+        <News />
     </main>
 </template>
 <style lang="scss">
