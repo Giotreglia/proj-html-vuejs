@@ -54,6 +54,14 @@ body {
     background-color: $color-secondary;
 }
 
+.bg-transparent {
+    background-color: transparent;
+}
+
+.border-white {
+    border: solid 2px white;
+}
+
 .btn-white {
     background-color: transparent;
     border: solid 2px white;
@@ -66,4 +74,13 @@ body {
 
 .text-grey {
     color: rgb(127, 127, 127);
+}
+
+.text-white {
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
 }

@@ -14,11 +14,13 @@ export default {
 
         <!-- Jumbo squares -->
         <div class="jumbo-squares-container">
-            <div class="jumbo-square" v-for="sqaure in 3"></div>
+            <div class="jumbo-square" v-for="square in 3"></div>
         </div>
 
         <!-- Jumbo text -->
-        <span class="jumbo-text">Learning & Fun</span>
+        <div class="container">
+            <span class="jumbo-text">Learning & Fun</span>
+        </div>
     </section>
 </template>
 <style lang="scss">
@@ -68,9 +70,8 @@ export default {
         color: rgb(238, 231, 228);
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 35px;
-        position: absolute;
-        top: 150px;
-        left: 10%;
+        display: block;
+        padding-top: 200px;
     }
 }
 </style>

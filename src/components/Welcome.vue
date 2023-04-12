@@ -48,7 +48,7 @@ export default {
         <!-- Welcome list -->
         <div id="welcome-list-container">
             <div class="card-container" v-for="(card, i) in welcomeList" :key="i">
-                <Card :img="card.image" :title="card.title" :text="card.text" :color="card.color" />
+                <Card :img="card.image" :title="card.title" :text="card.text" :color="card.color" :titleColor="`primary`" />
             </div>
         </div>
 
