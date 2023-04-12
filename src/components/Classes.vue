@@ -40,7 +40,7 @@ export default {
 
                 <ClassesCard :title="`Bouncy Bears`" :age="`2-3`" :size="`12`" :img="`src/assets/images/team_03.jpg`" />
 
-                <ClassesCard :title="`Tenderhearts`" :age="`4-5`" :size="`20`"
+                <ClassesCard :title="`Shining Stars`" :age="`4-5`" :size="`20`"
                     :img="`src/assets/images/class_04-690x506.jpg`" />
 
 

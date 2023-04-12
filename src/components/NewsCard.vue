@@ -20,7 +20,6 @@ export default {
             <div class="number">{{ number }}</div>
         </div>
         <span class="name primary">{{ title }}</span>
-        <span class="role text-grey">{{ role }}</span>
         <p class="text-grey">{{ text }}</p>
         <div class="author">
             <div class="author-details">

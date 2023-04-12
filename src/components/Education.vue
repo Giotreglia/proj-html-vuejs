@@ -7,7 +7,41 @@ export default {
     components: {
         Card,
         CTA
-    }
+    },
+    data() {
+        return {
+            listText: [
+                'Comprehensive reporting on individual achievement',
+                'Educational field trips and school presentations',
+                'Individual attention in a small-class setting',
+                'Learning program with after-school care',
+                'Opportunities to carry out scientific investigations',
+                'Positive learning environment for your Child'
+            ],
+            educationThumbnails: [
+                {
+                    item: 'toy',
+                    title: 'Learnin & Fun',
+                    text: 'Praesent modea est gravida node vehicula luctus.',
+                },
+                {
+                    item: 'meal',
+                    title: 'Healthy Meals',
+                    text: 'Terminal interdum a eleifend maecenas est morbi.',
+                },
+                {
+                    item: 'school',
+                    title: 'Friendly Place',
+                    text: 'Terminal interdum a eleifend maecenas est morbi.',
+                },
+                {
+                    item: 'shield',
+                    title: 'Children Safety',
+                    text: 'Praesent modea est gravida node vehicula luctus.',
+                }
+            ]
+        }
+    },
 }
 </script>
 <template>
@@ -28,29 +62,14 @@ export default {
                 </p>
 
                 <ul id="education-list" class="text-grey">
-                    <li><i class="fa-regular fa-square-check"></i> Comprehensive reporting on individual achievement</li>
-                    <li><i class="fa-regular fa-square-check"></i> Educational field trips and school presentations</li>
-                    <li><i class="fa-regular fa-square-check"></i> Individual attention in a small-class setting</li>
-                    <li><i class="fa-regular fa-square-check"></i> Learning program with after-school care</li>
-                    <li><i class="fa-regular fa-square-check"></i> Opportunities to carry out scientific investigations</li>
-                    <li><i class="fa-regular fa-square-check"></i> Positive learning environment for your Child</li>
+                    <li v-for="item in listText"><i class="fa-regular fa-square-check"></i> {{ item }}</li>
                 </ul>
             </div>
 
             <!-- Education right -->
             <div class="education-right">
-                <Card :color="`bg-white`" :img="`src/assets/images/toy.png`" :title="`Learnin & Fun`"
-                    :titleColor="`primary`" :text="`Praesent modea est gravida node vehicula luctus.`"
-                    :subtitleColor="`text-grey`" />
-                <Card :color="`bg-white`" :img="`src/assets/images/meal.png`" :title="`Healthy Meals`"
-                    :titleColor="`primary`" :text="`Terminal interdum a eleifend maecenas est morbi.`"
-                    :subtitleColor="`text-grey`" />
-                <Card :color="`bg-white`" :img="`src/assets/images/school.png`" :title="`Friendly Place`"
-                    :titleColor="`primary`" :text="`Terminal interdum a eleifend maecenas est morbi.`"
-                    :subtitleColor="`text-grey`" />
-                <Card :color="`bg-white`" :img="`src/assets/images/shield.png`" :title="`Children Safety`"
-                    :titleColor="`primary`" :text="`Praesent modea est gravida node vehicula luctus.`"
-                    :subtitleColor="`text-grey`" />
+                <Card v-for="item in educationThumbnails" :color="`bg-white`" :img="`src/assets/images/${item.item}.png`"
+                    :title="item.title" :titleColor="`primary`" :text="item.text" :subtitleColor="`text-grey`" />
             </div>
 
         </div>

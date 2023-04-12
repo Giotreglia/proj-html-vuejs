@@ -1,12 +1,13 @@
 <script>
 export default {
-    name: 'Card',
+    name: 'ContactsCard',
     props: {
         img: String,
         title: String,
-        text: String,
+        textA: String,
+        textB: String,
+        textC: String,
         color: String,
-        number: String,
         titleColor: String,
         subtitleColor: String
     }
@@ -16,10 +17,14 @@ export default {
     <div class="card">
         <div class="card-img-container" :class="color">
             <img v-if="img" :src="img" alt="">
-            <span class="card-number" :class="titleColor" v-else>{{ number }}</span>
         </div>
         <h3 :class="titleColor">{{ title }}</h3>
-        <p :class="subtitleColor">{{ text }}</p>
+        <div>
+            <p :class="subtitleColor">{{ textA }}</p>
+            <p :class="subtitleColor">{{ textB }}</p>
+            <p :class="subtitleColor">{{ textC }}</p>
+        </div>
+
     </div>
 </template>
 <style lang="scss" scoped>
@@ -40,9 +45,6 @@ export default {
 }
 
 .card-img-container {
-    width: 140px;
-    height: 140px;
-    padding: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;

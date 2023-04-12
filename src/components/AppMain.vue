@@ -7,6 +7,9 @@ import Education from './Education.vue';
 import StaffSection from './StaffSection.vue';
 import QuoteBanner from './QuoteBanner.vue';
 import News from './News.vue';
+import MapLocation from './MapLocation.vue';
+import Contacts from './Contacts.vue';
+
 
 export default {
     name: 'AppMain',
@@ -18,7 +21,10 @@ export default {
         Education,
         StaffSection,
         QuoteBanner,
-        News
+        News,
+        MapLocation,
+        Contacts
+
     }
 }
 </script>
@@ -32,6 +38,10 @@ export default {
         <StaffSection />
         <QuoteBanner />
         <News />
+        <MapLocation />
+        <Contacts />
+
+
     </main>
 </template>
 <style lang="scss">
