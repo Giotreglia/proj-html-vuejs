@@ -2,13 +2,15 @@
 import Welcome from '../components/Welcome.vue';
 import OverviewMission from './OverviewMission.vue';
 import StatsSection from './StatsSection.vue';
+import Classes from './Classes.vue';
 
 export default {
     name: 'AppMain',
     components: {
         Welcome,
         OverviewMission,
-        StatsSection
+        StatsSection,
+        Classes
     }
 }
 </script>
@@ -17,6 +19,7 @@ export default {
         <Welcome />
         <OverviewMission />
         <StatsSection />
+        <Classes />
     </main>
 </template>
 <style lang="scss">
