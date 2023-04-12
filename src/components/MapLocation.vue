@@ -11,4 +11,8 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/general.scss';
 @use '../styles/partials/variables' as *;
+
+img {
+    width: 100%;
+}
 </style>
