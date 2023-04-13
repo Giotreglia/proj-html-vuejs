@@ -115,7 +115,6 @@ export default {
 
     .form-right {
         width: 50%;
-        height: 100%;
 
         textarea {
             width: 100%;

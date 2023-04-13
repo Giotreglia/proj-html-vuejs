@@ -23,15 +23,17 @@ export default {
                     Our staff consists of three teachers and one assistant with experience in early childhood care.
                 </p>
 
-                <StaffCard :name="`Ruth Richie`" :role="'Teacher'" :img="'src/assets/images/team_04.jpg'"
-                    :text="`I have just finished my studies in Early Childhood Education, and I am also the kid's yoga teacher here at Fable. I enjoy cooking, swimming and bike riding in my free time.`"
-                    :socialA="`src/assets/images/mail.png`" :socialB="`src/assets/images/facebook.png`"
-                    :socialC="`src/assets/images/pinterest.png`" />
+                <div>
+                    <StaffCard :name="`Ruth Richie`" :role="'Teacher'" :img="'src/assets/images/team_04.jpg'"
+                        :text="`I have just finished my studies in Early Childhood Education, and I am also the kid's yoga teacher here at Fable. I enjoy cooking, swimming and bike riding.`"
+                        :socialA="`src/assets/images/mail.png`" :socialB="`src/assets/images/facebook.png`"
+                        :socialC="`src/assets/images/pinterest.png`" />
 
-                <StaffCard :name="`Angelica Watson`" :role="'Lead Teacher'" :img="'src/assets/images/team_02.jpg'"
-                    :text="`I hold a degree in Early Childhood Education and an advanced English language certificate- I have been working as a kindergarten teacher since 2002.`"
-                    :socialA="`src/assets/images/bing.png`" :socialB="`src/assets/images/skype.png`"
-                    :socialC="`src/assets/images/linkedin.png`" />
+                    <StaffCard :name="`Angelica Watson`" :role="'Lead Teacher'" :img="'src/assets/images/team_02.jpg'"
+                        :text="`I hold a degree in Early Childhood Education and an advanced English language certificate- I have been working as a kindergarten teacher since 2002.`"
+                        :socialA="`src/assets/images/bing.png`" :socialB="`src/assets/images/skype.png`"
+                        :socialC="`src/assets/images/linkedin.png`" />
+                </div>
 
             </div>
             <div class="staff-right">
@@ -41,15 +43,17 @@ export default {
                     sodales, magna ante feugiat elit maecenas.
                 </p>
 
-                <StaffCard :name="`Katie Willmore`" :role="'Assistant Teacher'" :img="'src/assets/images/team_03.jpg'"
-                    :text="`My name is Katie. I grew up and studied in Canada. This is my second year at Fable and love every minute of it, making the children's learning experience fun`"
-                    :socialA="`src/assets/images/dribbble.png`" :socialB="`src/assets/images/stumbleupon.png`"
-                    :socialC="`src/assets/images/instagram.png`" />
+                <div>
+                    <StaffCard :name="`Katie Willmore`" :role="'Assistant Teacher'" :img="'src/assets/images/team_03.jpg'"
+                        :text="`My name is Katie. I grew up and studied in Canada. This is my second year at Fable and love every minute of it, making the children's learning experience fun`"
+                        :socialA="`src/assets/images/dribbble.png`" :socialB="`src/assets/images/stumbleupon.png`"
+                        :socialC="`src/assets/images/instagram.png`" />
 
-                <StaffCard :name="`Angela Lynn`" :role="'Teacher'" :img="'src/assets/images/team_01.jpg'"
-                    :text="`I have completed a Graduate Diploma in Early Childhood Teaching. I have worked with children aged from Six weeks to eight years. This is my second year at Fable.`"
-                    :socialA="`src/assets/images/youtube.png`" :socialB="`src/assets/images/twitter.png`"
-                    :socialC="`src/assets/images/googleplus.png`" />
+                    <StaffCard :name="`Angela Lynn`" :role="'Teacher'" :img="'src/assets/images/team_01.jpg'"
+                        :text="`I have completed a Graduate Diploma in Early Childhood Teaching. I have worked with children aged from Six weeks to eight years. This is my second year at Fable.`"
+                        :socialA="`src/assets/images/youtube.png`" :socialB="`src/assets/images/twitter.png`"
+                        :socialC="`src/assets/images/googleplus.png`" />
+                </div>
 
 
             </div>
@@ -78,6 +82,7 @@ export default {
     .staff-right {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 50%;
     }
 }
@@ -89,7 +94,7 @@ export default {
 
 .staff-right-text {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 40px;
     margin-bottom: 40px;
 }
 

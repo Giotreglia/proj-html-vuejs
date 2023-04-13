@@ -43,6 +43,7 @@ export default {
 
 .classes-card {
     display: flex;
+    overflow: hidden;
 }
 
 .classes-card-left,
@@ -72,7 +73,7 @@ export default {
 }
 
 .class-data {
-    margin-top: 90px;
+    margin-top: 80px;
     display: flex;
 
     .data-left,

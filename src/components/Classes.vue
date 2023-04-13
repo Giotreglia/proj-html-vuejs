@@ -24,11 +24,13 @@ export default {
                     years of age.
                 </p>
 
-                <ClassesCard :title="`Little Lambs`" :age="`12-24`" :size="`9`"
-                    :img="`src/assets/images/gallery_04-690x506.jpg`" />
+                <div>
+                    <ClassesCard :title="`Little Lambs`" :age="`12-24`" :size="`9`"
+                        :img="`src/assets/images/gallery_04-690x506.jpg`" />
 
-                <ClassesCard :title="`Tenderhearts`" :age="`3-4`" :size="`15`"
-                    :img="`src/assets/images/class_03-690x506.jpg`" />
+                    <ClassesCard :title="`Tenderhearts`" :age="`3-4`" :size="`15`"
+                        :img="`src/assets/images/class_03-690x506.jpg`" />
+                </div>
 
             </div>
             <div class="classes-right">
@@ -37,11 +39,12 @@ export default {
                     eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae
                     sodales, magna ante feugiat elit maecenas.
                 </p>
+                <div>
+                    <ClassesCard :title="`Bouncy Bears`" :age="`2-3`" :size="`12`" :img="`src/assets/images/team_03.jpg`" />
 
-                <ClassesCard :title="`Bouncy Bears`" :age="`2-3`" :size="`12`" :img="`src/assets/images/team_03.jpg`" />
-
-                <ClassesCard :title="`Shining Stars`" :age="`4-5`" :size="`20`"
-                    :img="`src/assets/images/class_04-690x506.jpg`" />
+                    <ClassesCard :title="`Shining Stars`" :age="`4-5`" :size="`20`"
+                        :img="`src/assets/images/class_04-690x506.jpg`" />
+                </div>
 
 
             </div>
@@ -70,12 +73,13 @@ export default {
     .classes-right {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 50%;
     }
 }
 
 .classes-claim {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 40px;
 }
 
@@ -83,47 +87,6 @@ export default {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 40px;
-}
-
-
-.classes-card {
-    display: flex;
-}
-
-.classes-card-left,
-.classes-card-right {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    background-color: $color-primary;
-    margin: 20px 0;
-    color: white;
-    padding: 20px;
-}
-
-.classes-card-right {
-    background-image: url('../assets/images/gallery_04-690x506.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.class-data {
-    margin-top: 90px;
-    display: flex;
-
-    .data-left,
-    .data-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 50%;
-    }
-
-    .data-left {
-        border-right: grey solid 1px;
-    }
 }
 
 .classes-btn {

@@ -2,9 +2,6 @@
 
 export default {
     name: 'FooterTop',
-    components: {
-
-    }
 }
 </script>
 <template>
@@ -133,7 +130,7 @@ export default {
 .footer-top-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
 
     .footer-top-col {
         width: calc(100% / 4);
@@ -162,6 +159,12 @@ export default {
         padding: 10px;
         margin: 5px 0;
         cursor: pointer;
+        transition: all 0.1s;
+
+        &:hover {
+            background-color: $color-secondary;
+            color: white;
+        }
     }
 }
 

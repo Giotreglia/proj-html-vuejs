@@ -30,7 +30,7 @@ export default {
 
 #quote {
     padding: 80px 0 200px;
-    height: 550px;
+    height: 600px;
     background-image: url('../assets/images/parallax_02.jpg');
     background-position: center;
     position: relative;
