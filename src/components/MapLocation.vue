@@ -4,8 +4,6 @@ export default {
 }
 </script>
 
-<!-- AIzaSyAVzak79mHaxxCSRjqx6O_FGQEvn2_1_s8 -->
-
 <template>
     <!-- Map -->
     <section id="map">
