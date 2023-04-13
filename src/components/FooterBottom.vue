@@ -5,11 +5,11 @@ export default {
     data() {
         return {
             social: [
-                `src/assets/images/behance.png`,
-                `src/assets/images/dribbble.png`,
-                `src/assets/images/envato.png`,
-                `src/assets/images/facebook.png`,
-                `src/assets/images/twitter.png`
+                `behance`,
+                `dribbble`,
+                `envato`,
+                `facebook`,
+                `twitter`
             ]
         }
     },
@@ -18,7 +18,8 @@ export default {
 <template>
     <section id="footer-bottom">
         <div class="social">
-            <div class="social-wrapper" v-for="img in social"><img :src="img" alt="social"></div>
+            <div class="social-wrapper" v-for="img in social"><img :src="`src/assets/images/${img}.png`" alt="social">
+            </div>
         </div>
 
         <div class="credits">

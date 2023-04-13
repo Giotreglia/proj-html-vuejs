@@ -2,11 +2,44 @@
 
 export default {
     name: 'FooterTop',
+    data() {
+        return {
+            months: ['OCTOBER', 'SEPTEMBER', 'AUGUST', 'JULY', 'JUNE', 'MAY'],
+            features: [
+                'Friendly and welcoming place',
+                'Science and art classes',
+                'Positive learning environment',
+                'Educational field trips',
+                'Writing and reading classes',
+                'Science and art classes'
+            ],
+            posts: [
+                {
+                    img: '09',
+                    title: 'Drawing and Painting Lessons',
+                    date: 'October 03, 2014'
+                },
+                {
+                    img: '10',
+                    title: 'Fall Parents Meeting Da',
+                    date: 'October 03, 2014'
+                },
+                {
+                    img: '08',
+                    title: 'Birthday in Kindergarten',
+                    date: 'September 20, 2014'
+                }
+            ]
+
+        }
+    },
 }
 </script>
 <template>
     <section id="footer-top">
         <div class="footer-top-container container">
+
+            <!-- About us -->
             <div class="footer-top-col text-grey">
                 <h3 class="text-grey">ABOUT US</h3>
                 <div class="line"></div>
@@ -19,20 +52,17 @@ export default {
 
             </div>
 
+            <!-- Archives -->
             <div class="footer-top-col text-grey">
                 <h3 class="text-grey">ARCHIVES</h3>
                 <div class="line"></div>
                 <ul class="archives-list">
-                    <li>OCTOBER 2014 (2)</li>
-                    <li>SEPTEMBER 2014 (2)</li>
-                    <li>AUGUST 2014 (2)</li>
-                    <li>JULY 2014 (2)</li>
-                    <li>JUNE 2014 (2)</li>
-                    <li>MAY 2014 (2)</li>
+                    <li v-for="month in months">{{ month }} 2014 (2)</li>
                 </ul>
 
             </div>
 
+            <!-- Our features -->
             <div class="footer-top-col text-grey">
                 <h3 class="text-grey">OUR FEATURES</h3>
                 <div class="line"></div>
@@ -40,79 +70,31 @@ export default {
                     ac vene:
                 </p>
                 <ul class="features-list">
-                    <li>
+                    <li v-for="feature in features">
                         <i class="fa-regular fa-square-check"></i>
-                        Friendly and welcoming place
+                        {{ feature }}
                     </li>
-                    <li>
-                        <i class="fa-regular fa-square-check"></i>
-                        Science and art classes
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-square-check"></i>
-                        Positive learning environment
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-square-check"></i>
-                        Educational field trips
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-square-check"></i>
-                        Writing and reading classes
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-square-check"></i>
-                        Science and art classes
-                    </li>
-
-
                 </ul>
 
             </div>
 
+            <!-- Recent posts -->
             <div class="footer-top-col text-grey">
                 <h3 class="text-grey">RECENT POSTS</h3>
                 <div class="line"></div>
 
-                <div class="post">
+                <div class="post" v-for="post in posts">
                     <div class="post-left">
-                        <img src="../assets/images/blog_09-150x150.jpg" alt="img">
+                        <img :src="`src/assets/images/blog_${post.img}-150x150.jpg`" alt="img">
                     </div>
                     <div class="post-right">
-                        <p class="bold">Drawing and Painting Lessons</p>
+                        <p class="bold">{{ post.title }}</p>
                         <p>
                             <i class="fa-solid fa-calendar-days"></i>
-                            <span class="date">October 03, 2014</span>
+                            <span class="date">{{ post.date }}</span>
                         </p>
                     </div>
                 </div>
-
-                <div class="post">
-                    <div class="post-left">
-                        <img src="../assets/images/blog_10-150x150.jpg" alt="img">
-                    </div>
-                    <div class="post-right">
-                        <p class="bold">Fall Parents Meeting Day</p>
-                        <p>
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <span class="date">October 03, 2014</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="post-left">
-                        <img src="../assets/images/blog_08-150x150.jpg" alt="img">
-                    </div>
-                    <div class="post-right">
-                        <p class="bold">Birthday in Kindergarten</p>
-                        <p>
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <span class="date">September 20, 2014</span>
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -184,7 +166,6 @@ export default {
 
 .post {
     display: flex;
-    gap: 10px;
 
     .post-left {
 
@@ -200,7 +181,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 20px 10px;
+        padding: 10px;
         width: 60%;
 
         i {

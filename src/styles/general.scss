@@ -1,5 +1,4 @@
 @use './partials/variables' as *;
-@import "@fontsource/noto-sans";
 
 
 * {
@@ -25,7 +24,7 @@ body {
 
 
     &:hover {
-        scale: 1.05;
+        scale: 1.02;
     }
 
     &:active {
@@ -44,7 +43,7 @@ body {
     gap: 6px;
 
     &:hover {
-        scale: 1.05;
+        scale: 1.02;
         background-color: lighten($color-secondary, 10);
     }
 

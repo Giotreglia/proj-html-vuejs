@@ -68,7 +68,7 @@ export default {
 
     .jumbo-text {
         color: rgb(238, 231, 228);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: cursive;
         font-size: 35px;
         display: block;
         padding-top: 200px;

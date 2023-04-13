@@ -4,8 +4,9 @@ export default {
 }
 </script>
 <template>
+    <!-- Map -->
     <section id="map">
-        <img src="../assets/images/map.png" alt="">
+        <img src="../assets/images/map.png" alt="map">
     </section>
 </template>
 <style lang="scss" scoped>

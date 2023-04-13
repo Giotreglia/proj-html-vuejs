@@ -11,7 +11,7 @@ export default {
 }
 </script>
 <template>
-    <section id="staff">
+    <section id="staff" class="container">
 
         <!-- staff header -->
         <SectionHeader :title="`Meet Our Staff`" :subtitle="`With education and experience in early childhood cares`" />
@@ -69,8 +69,6 @@ export default {
 
 #staff {
     padding: 50px 0;
-    max-width: 1170px;
-    margin: auto;
 }
 
 .staff-container {

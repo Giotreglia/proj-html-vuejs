@@ -17,9 +17,9 @@ export default {
 
             <span class="text-white">Joe R. Hamblen</span>
 
-            <!-- Stats squares -->
-            <div class="stats-squares-container">
-                <div class="stats-square" v-for="square in 6"></div>
+            <!-- Quote squares -->
+            <div class="quotes-squares-container">
+                <div class="quotes-square" v-for="square in 6"></div>
             </div>
         </div>
     </section>
@@ -61,7 +61,7 @@ export default {
     padding: 25px;
 }
 
-.stats-squares-container {
+.quotes-squares-container {
     height: 30px;
     position: absolute;
     bottom: 80px;
@@ -72,7 +72,7 @@ export default {
     align-items: flex-end;
     gap: 10px;
 
-    .stats-square {
+    .quotes-square {
         width: 50px;
         height: 50%;
         border: solid 3px white;
