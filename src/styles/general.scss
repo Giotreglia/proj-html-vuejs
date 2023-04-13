@@ -99,10 +99,16 @@ body {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 962px;
     margin: auto;
 }
 
 .bold {
     font-weight: bold;
+}
+
+@media all and (min-width: 992px) {
+    .container {
+        max-width: 1170px;
+    }
 }

@@ -12,6 +12,7 @@
     "@fawmi/vue-google-maps": "^0.9.79",
     "@fontsource/noto-sans": "^4.5.11",
     "@fontsource/open-sans": "^4.5.14",
+    "@googlemaps/js-api-loader": "^1.15.1",
     "sass": "^1.61.0",
     "vue": "^3.2.47"
   },

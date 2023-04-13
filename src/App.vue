@@ -5,6 +5,7 @@ import AppFooter from './components/AppFooter.vue';
 import "@fontsource/noto-sans/400.css";
 
 
+
 export default {
   components: {
     AppHeader,
