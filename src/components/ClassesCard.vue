@@ -73,7 +73,7 @@ export default {
 }
 
 .class-data {
-    margin-top: 80px;
+    margin-top: 70px;
     display: flex;
 
     .data-left,

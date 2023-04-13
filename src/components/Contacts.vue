@@ -59,7 +59,10 @@ export default {
         <!-- Contacts Form -->
         <form class="contacts-form">
             <div class="form-left">
-                <input type="text" placeholder="Your Name *">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Your Name *">
+                    <span class="input-icon"><i class="fa-regular fa-square-caret-down"></i></span>
+                </div>
                 <input type="text" placeholder="Your E-mail *">
                 <input type="text" placeholder="Subject">
             </div>
@@ -124,5 +127,17 @@ export default {
             font-family: Arial, Helvetica, sans-serif;
         }
     }
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(117, 117, 117);
 }
 </style>

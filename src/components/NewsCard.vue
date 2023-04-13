@@ -42,7 +42,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: calc(100% / 3);
-    gap: 10px;
+    gap: 20px;
     padding: 20px 0;
 
     .name {

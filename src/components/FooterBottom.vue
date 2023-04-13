@@ -23,7 +23,7 @@ export default {
         </div>
 
         <div class="credits">
-            <span> &#xa9; Fable - Children Ki ndergarten WordPress Theme by QuanticaLabs</span>
+            <span> &#xa9; Fable - Children Kindergarten WordPress Theme by QuanticaLabs</span>
         </div>
 
         <div class="up">

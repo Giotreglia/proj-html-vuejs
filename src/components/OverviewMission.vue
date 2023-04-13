@@ -16,19 +16,43 @@ export default {
                 }
             ],
             thumbnails: [
-
-                'src/assets/images/gallery_07-690x506.jpg',
-                'src/assets/images/gallery_01-690x506.jpg',
-                'src/assets/images/gallery_08-690x506.jpg',
-
-            ]
+                {
+                    img: 'src/assets/images/gallery_07-690x506.jpg',
+                    visible: false
+                },
+                {
+                    img: 'src/assets/images/gallery_01-690x506.jpg',
+                    visible: false
+                },
+                {
+                    img: 'src/assets/images/gallery_08-690x506.jpg',
+                    visible: false
+                }
+            ],
+            activeImage: 0
         }
+    },
+    methods: {
+        nextImage() {
+            if (this.activeImage != this.thumbnails.length - 1) {
+                this.activeImage++;
+            } else if (this.activeImage == this.thumbnails.length - 1) {
+                this.activeImage = 0;
+            }
+        },
+        prevImage() {
+            if (this.activeImage != 0) {
+                this.activeImage--;
+            } else if (this.activeImage == 0) {
+                this.activeImage = this.thumbnails.length - 1;
+            }
+        },
     },
 }
 </script>
 <template>
     <section id="overview-mission">
-        <div id="overview-mission-container">
+        <div id="overview-mission-container" class="container">
             <div class="overview-mission-left">
                 <div class="overview-buttons">
                     <button class="btn-left btn bg-secondary">
@@ -55,13 +79,15 @@ export default {
 
             <div class="overview-mission-right">
                 <div class="overview-carousel">
-                    <img src="../assets/images/gallery_01.jpg" alt="team">
-                    <div class="chevron prev"><i class="fa-solid fa-chevron-left"></i></div>
-                    <div class="chevron next"><i class="fa-solid fa-chevron-right"></i></div>
+                    <img :src="thumbnails[activeImage].img" alt="team">
+                    <div class="chevron prev" @click="this.prevImage"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="chevron next" @click="this.nextImage"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
                 <div class="overview-thumbnails">
-                    <div class="overview-thumbnail" v-for="slide in thumbnails">
-                        <img :src="slide" alt="thumbnail">
+                    <div class="overview-thumbnail" v-for="(slide, i) in thumbnails" :key="i"
+                        @click="this.activeImage = i; this.thumbnails[activeImage].visible = true">
+                        <img :src="slide.img" alt="thumbnail">
+                        <div :class="(this.activeImage == i ? 'thumbnailUnderline' : '')"></div>
                     </div>
                 </div>
             </div>
@@ -82,8 +108,6 @@ export default {
 }
 
 #overview-mission-container {
-    max-width: 1170px;
-    margin: auto;
     display: flex;
     padding: 50px 0;
 }
@@ -126,16 +150,6 @@ export default {
             width: calc(100% / 3);
             padding: 10px 0;
             position: relative;
-
-            &:nth-child(2):after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 2px;
-                background-color: $color-secondary;
-            }
 
             img {
                 width: 100%;
@@ -207,6 +221,7 @@ export default {
     background-color: $color-secondary;
     border-radius: 50%;
     padding: 30px;
+    display: flex;
 }
 
 .arrow-down {
@@ -216,5 +231,14 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     font-size: 25px;
+}
+
+.thumbnailUnderline {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-secondary;
 }
 </style>

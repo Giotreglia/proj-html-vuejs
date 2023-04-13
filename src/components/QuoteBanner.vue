@@ -56,6 +56,7 @@ export default {
 }
 
 .apix {
+    display: flex;
     border: white 2px solid;
     border-radius: 50%;
     padding: 25px;
