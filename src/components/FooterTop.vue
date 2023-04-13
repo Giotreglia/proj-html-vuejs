@@ -47,7 +47,7 @@ export default {
                     morbi vehicula morbi.
                 </p>
                 <div>
-                    <img src="../assets/images/logo_footer.png" alt="logo fable">
+                    <img class="logo" src="../assets/images/logo_footer.png" alt="logo fable">
                 </div>
 
             </div>
@@ -71,7 +71,9 @@ export default {
                 </p>
                 <ul class="features-list">
                     <li v-for="feature in features">
-                        <i class="fa-regular fa-square-check"></i>
+                        <div class="features-img-wrapper">
+                            <img src="../assets/images/style_4_alt.png" alt="check">
+                        </div>
                         {{ feature }}
                     </li>
                 </ul>
@@ -104,7 +106,7 @@ export default {
 @use '../styles/partials/variables' as *;
 
 #footer-top {
-    padding: 50px 0;
+    padding: 80px 0;
     background-image: url('../assets/images/pattern.png');
     height: 600px;
 }
@@ -126,7 +128,7 @@ export default {
             background-color: $color-grey;
         }
 
-        img {
+        .logo {
             width: 80%;
         }
     }
@@ -156,12 +158,17 @@ export default {
 
     li {
         margin: 10px 0;
+        display: flex;
+        align-items: center;
+
+        .features-img-wrapper {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+        }
     }
 
-    i {
-        color: white;
-        margin-right: 10px;
-    }
 }
 
 .post {

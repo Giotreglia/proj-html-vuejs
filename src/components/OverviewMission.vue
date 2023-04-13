@@ -109,7 +109,7 @@ export default {
 
 #overview-mission-container {
     display: flex;
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
 .overview-mission-left {

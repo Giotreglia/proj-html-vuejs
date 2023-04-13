@@ -65,7 +65,7 @@ export default {
 @use '../styles/partials/variables' as *;
 
 #stats {
-    padding: 50px 0 150px;
+    padding: 80px 0 150px;
     background-image: url('../assets/images/parallax_01.jpg');
     background-position: center;
     position: relative;

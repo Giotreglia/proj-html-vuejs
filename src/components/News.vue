@@ -50,7 +50,7 @@ export default {
 @use '../styles/partials/variables' as *;
 
 #news {
-    padding: 50px 0;
+    padding: 80px 0;
 
     button {
         margin: 30px auto;

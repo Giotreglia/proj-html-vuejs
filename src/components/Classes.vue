@@ -11,7 +11,7 @@ export default {
 }
 </script>
 <template>
-    <section id="classes">
+    <section id="classes" class="container">
 
         <!-- Classes header -->
         <SectionHeader :title="`Our Classes`" :subtitle="`Our preschool program has four dedicated classes`" />
@@ -59,9 +59,7 @@ export default {
 @use '../styles/partials/variables' as *;
 
 #classes {
-    padding: 50px 0;
-    max-width: 1170px;
-    margin: auto;
+    padding: 80px 0;
 }
 
 .classes-container {
